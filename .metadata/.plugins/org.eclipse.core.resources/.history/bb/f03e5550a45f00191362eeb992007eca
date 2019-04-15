@@ -1,0 +1,32 @@
+package src;
+
+import java.awt.*;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+public class HelpBox {
+	int result;
+	
+	public void callHelp() {
+		JFrame parent = new JFrame("Information");
+		result = JOptionPane.showConfirmDialog(parent, "Information :" + "\n" +
+		    " In this game, the objective is to score as many points as possible"
+		        + " by correctly knocking off 4 different types of obstacles" 
+		    	+ " as pikachu walks through the park. \n"
+		        + " When the next closest obstacle is \n " 
+		    	+ "* a tree, press RIGHT arrow key \n"
+				+ "* a mountain, press DOWN arrow key \n"
+		    	+ "* a log, press SPACE key \n"
+				+ "* a cloud, press UP arrow key in order to score. \n"
+		    	+ "* a bomb, do not press any key until it passes you. \n"
+				+ " if you miss an obstacle (so that pikachu is hit by an"
+				+ " obstacle) or hit a wrong key,"
+				+ " you will lose 1 heart as a result. \n"
+				+ " A cloud will restore you 1 heart. \n"
+				+ " Good Luck!",
+				"Game Instructions",
+				JOptionPane.OK_OPTION
+				);
+	}
+}
